@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 if (v.getDrawingCache() == null)
                     v.buildDrawingCache();
                 myView.addParticle(new ParticleSys2(ParticleGen.gen(v.getDrawingCache(), 8),
-                        v.getX() + (v.getWidth() / 2), v.getY() + (v.getHeight() / 2)
+                        v.getX() + (v.getWidth() / 2), v.getY() + (v.getHeight() / 2),5
                 ));
                 v.setVisibility(View.INVISIBLE);
             }
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 if (v.getDrawingCache() == null)
                     v.buildDrawingCache();
                 myView.addParticle(new ParticleSys4(ParticleGen.gen(v.getDrawingCache(), 8),
-                        v.getX() + (v.getWidth() / 2), v.getY() + (v.getHeight() / 2),8f,4f,8
+                        v.getX() + (v.getWidth() / 2), v.getY() + (v.getHeight() / 2),7f,4f,8
                 ));
                 v.setVisibility(View.INVISIBLE);
             }

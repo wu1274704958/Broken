@@ -17,9 +17,10 @@ public class ParticleSys2 implements Particleable{
     private ArrayList<Particle> myPs;
     private ArrayList<Boolean> activate;
     private int activateNum;
-
-    public ParticleSys2(@NonNull ArrayList<Particle> ps, float x, float y)
+    private int stepNum;
+    public ParticleSys2(@NonNull ArrayList<Particle> ps, float x, float y,int stepNum)
     {
+        this.stepNum = stepNum;
         activate = new ArrayList<>();
         activateNum = 2;
         for(int i = 0;i < ps.size();i++)
@@ -72,7 +73,7 @@ public class ParticleSys2 implements Particleable{
             }
             i++;
         }
-        activateNum += 3;
+        activateNum += stepNum;
         sin_n += zl;
     }
 }
