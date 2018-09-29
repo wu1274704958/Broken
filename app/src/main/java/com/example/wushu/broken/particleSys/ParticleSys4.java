@@ -66,6 +66,8 @@ public class ParticleSys4 implements Particleable{
     public void update(float delatiem) {
         for(int i = 0;i < activate.size() ;i++)
         {
+            if(activate.get(i))
+                continue;
             if(bigc_x0 + activate_r >  myPs.get(i).pos.x + part_r && bigc_y0 + activate_r > myPs.get(i).pos.y + part_r )
             {
                 activate.set(i,true);

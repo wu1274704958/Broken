@@ -60,6 +60,8 @@ public class ParticleSys2 implements Particleable{
     public void update(float delatiem) {
         for(int i = 0;i < (activateNum > activate.size() ? activate.size() : activateNum) ;i++)
         {
+            if(activate.get(i))
+                continue;
             activate.set(i,true);
         }
         int i = 0;
